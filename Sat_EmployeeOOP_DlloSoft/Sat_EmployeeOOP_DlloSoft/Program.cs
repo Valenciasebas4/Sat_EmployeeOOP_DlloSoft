@@ -142,13 +142,13 @@ namespace Sat_EmployeeOOP_DlloSoft
                 Console.Write("Are you active? True or False: ");
                 isActive = Convert.ToBoolean(Console.ReadLine());
 
-                Console.Write("Enter your commission percentage:");
+                Console.Write("Enter your commission percentage: ");
                 commissionPercentage = Convert.ToSingle(Console.ReadLine());
 
-                Console.Write("Enter your sales:");
+                Console.Write("Enter your sales: ");
                 sales = Convert.ToDecimal(Console.ReadLine());
 
-                Console.Write("Enter your salary base:");
+                Console.Write("Enter your salary base: ");
                 salaryBase = Convert.ToDecimal(Console.ReadLine());
 
                 Employee baseComissionEmployee = new BaseCommissionEmployee()
@@ -165,6 +165,44 @@ namespace Sat_EmployeeOOP_DlloSoft
                 };
                 Console.Clear();
                 Console.WriteLine(baseComissionEmployee);
+
+                Console.WriteLine("");
+
+                Console.WriteLine("       ***********************");
+                Console.WriteLine("       * CONTRACTOR EMPLOYEE *");
+                Console.WriteLine("       ***********************");
+
+                Console.Write("Ingrese Identifiación: ");
+                id = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Ingrese nombre completo: ");
+                firstName = Console.ReadLine();
+
+                Console.Write("Ingrese apellidos: ");
+                lastName = Console.ReadLine();
+
+                Console.Write("Are you active? True or False: ");
+                isActive = Convert.ToBoolean(Console.ReadLine());
+
+                Console.Write("Ingrese el numero de horas: ");
+                float hours = Convert.ToSingle(Console.ReadLine());
+
+                Console.Write("Ingrese el valor de la hora: ");
+                decimal hourValue = Convert.ToDecimal(Console.ReadLine());
+
+                HourlyEmployee hourlyEmployee = new HourlyEmployee()
+                {
+                    Id = id,
+                    FirstName = firstName,
+                    LastName = lastName,
+                    BirthDate = new Date(Convert.ToInt32(year), Convert.ToInt32(month), Convert.ToInt32(day)),
+                    HiringDate = new Date(2022, 3, 4),
+                    IsActive = isActive,
+                    Hours = hours,
+                    HourValue = hourValue,
+                };
+                Console.Clear();
+                Console.WriteLine(hourlyEmployee);
             }
             catch (Exception ex)
             {
