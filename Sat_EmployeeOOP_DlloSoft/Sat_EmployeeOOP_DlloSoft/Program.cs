@@ -169,7 +169,7 @@ namespace Sat_EmployeeOOP_DlloSoft
                 Console.WriteLine("");
 
                 Console.WriteLine("       ***********************");
-                Console.WriteLine("       * CONTRACTOR EMPLOYEE *");
+                Console.WriteLine("       * Contrato Empleado *");
                 Console.WriteLine("       ***********************");
 
                 Console.Write("Ingrese Identifiación: ");
@@ -195,7 +195,7 @@ namespace Sat_EmployeeOOP_DlloSoft
                     Id = id,
                     FirstName = firstName,
                     LastName = lastName,
-                    BirthDate = new Date(Convert.ToInt32(year), Convert.ToInt32(month), Convert.ToInt32(day)),
+                    BirthDate = birthDate,
                     HiringDate = new Date(2022, 3, 4),
                     IsActive = isActive,
                     Hours = hours,
