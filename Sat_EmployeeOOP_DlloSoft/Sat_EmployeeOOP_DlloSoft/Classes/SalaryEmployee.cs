@@ -20,8 +20,9 @@ namespace Sat_EmployeeOOP_DlloSoft
 
         public override string ToString()
         {
-            return $"{base.ToString()}\n\t" +
-                $"Salario........{GetValueToPay():C2}";
+            return $"{base.ToString()}\n\t " +
+                $"Salario........{GetValueToPay():C2} \n\t"+
+                $"------------------------------------";
         }
 
         #endregion

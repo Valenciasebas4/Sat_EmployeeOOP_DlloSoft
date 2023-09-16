@@ -23,13 +23,14 @@ namespace Sat_EmployeeOOP_DlloSoft
         public override string ToString()
         {
 
-            return $"------INFORMACIÒN DEL EMPLEADO------\n\t" +
+            return $"        ------INFORMACIÒN DEL EMPLEADO------\n\t " +
                 $"ID: {Id} \n\t " +
                 $"First Name: {FirstName} \n\t " +
                 $"Last Name: {LastName} \n\t " +
                 $"Birth date: {BirthDate} \n\t " +
                 $"Hiring Date: {HiringDate} \n\t " +
                 $"Is Active? {IsActive}";
+                
         }
 
         #endregion

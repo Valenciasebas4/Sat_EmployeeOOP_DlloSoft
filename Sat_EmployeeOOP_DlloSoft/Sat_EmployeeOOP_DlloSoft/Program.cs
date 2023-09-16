@@ -9,27 +9,34 @@ namespace Sat_EmployeeOOP_DlloSoft
         {
             try
             {
-                Console.WriteLine("OOP APPLICATION");
+                
                 Console.WriteLine("---------------");
 
                 //Declarar algunas variables
                 int day, month, year, id;
                 string firstName, lastName;
                 decimal salary;
+                bool isActive;
 
-                Console.Write("Ingresar el día: ");
+                Console.Write("Ingresar el día del cumpleaños: ");
                 day = Convert.ToInt32(Console.ReadLine());
 
-                Console.Write("Ingresar el mes: ");
+                Console.Write("Ingresar el mes del cumpleaños: ");
                 month = Convert.ToInt32(Console.ReadLine());
 
-                Console.Write("Ingresar el año: ");
+                Console.Write("Ingresar el año del cumpleaños: ");
                 year = Convert.ToInt32(Console.ReadLine());
 
                 //Instanciar la clase Date.cs
-                Date dateObject = new Date(year, month, day);
+                Date birthDate = new Date(year, month, day);
                 Console.Write("\n"); //Salto de línea
-                Console.WriteLine(dateObject.ToString()); //23/50/23232
+                //Console.WriteLine(dateObject.ToString()); //23/50/23232
+
+                Console.WriteLine("");
+
+                Console.WriteLine("       *******************");
+                Console.WriteLine("       * SALARY EMPLOYEE *");
+                Console.WriteLine("       *******************");
 
                 Console.Write("Ingrese Identifiación: ");
                 id = Convert.ToInt32(Console.ReadLine());
@@ -40,8 +47,25 @@ namespace Sat_EmployeeOOP_DlloSoft
                 Console.Write("Ingrese apellidos: ");
                 lastName = Console.ReadLine();
 
+                Console.Write("Ingresar el día del Contrato: ");
+                day = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Ingresar el mes del Contrato: ");
+                month = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Ingresar el año del Contrato: ");
+                year = Convert.ToInt32(Console.ReadLine());
+
+                //Instanciar la clase Date.cs
+                Date hiringDate = new Date(year, month, day);
+
+                Console.Write("Are you active? True or False: ");
+                isActive = Convert.ToBoolean(Console.ReadLine());
+
                 Console.Write("Ingrese salario devengado: ");
                 salary = Convert.ToDecimal(Console.ReadLine());
+
+                Console.Write("\n"); //Salto de línea
 
                 //Esta es la forma de crear objetos a partir de una clase concreta
                 SalaryEmployee salaryEmployee = new SalaryEmployee()
@@ -49,21 +73,15 @@ namespace Sat_EmployeeOOP_DlloSoft
                     Id = id,
                     FirstName = firstName,
                     LastName = lastName,
-                    BirthDate = dateObject,
-                    HiringDate = dateObject,
+                    BirthDate = birthDate,
+                    HiringDate = hiringDate,
                     IsActive = true,
                     Salary = salary
                 };
 
-                Console.Clear();
+                //Console.Clear();
                 Console.WriteLine(salaryEmployee);
 
-                //salaryEmployee.Id = 123;
-                //salaryEmployee.FirstName = "Juan";
-                //salaryEmployee.LastName = "Gómez";
-                //salaryEmployee.BirthDate = dateObject;
-                //salaryEmployee.HiringDate = dateObject;
-                //salaryEmployee.IsActive = true;
             }
             catch (Exception ex)
             {
